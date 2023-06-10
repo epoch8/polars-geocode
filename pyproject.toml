@@ -1,6 +1,6 @@
 [project]
 name = "polars-geocode"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = [
     { name = "Andrey Tatarinov", email = "<a@tatarinov.co>" }

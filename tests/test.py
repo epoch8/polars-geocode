@@ -13,7 +13,7 @@ print(
         pl.col("ip")
         .map(
             lambda x: polars_geocode.ip_to_continent_country_city(
-                "./polars_geocode/GeoLite2-City.mmdb", x
+                "./tests/GeoLite2-City.mmdb", x
             )
         )
         .alias("geo"),
