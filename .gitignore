@@ -1,0 +1,3 @@
+/target
+polars_geocode/*.so
+__pycache__
