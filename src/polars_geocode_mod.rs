@@ -31,11 +31,9 @@ fn _ip_to_ccc(
 }
 
 pub(super) fn ip_to_continent_country_city(
-    database_filename: &str,
+    reader: &maxminddb::Reader<Vec<u8>>,
     ips: Series,
 ) -> PolarsResult<Series> {
-    let reader = maxminddb::Reader::open_readfile(database_filename).unwrap();
-
     let ips_chunked = ips.utf8()?;
 
     let geos = ips_chunked
